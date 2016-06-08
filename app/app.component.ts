@@ -15,18 +15,18 @@ import { EditMealComponent} from './edit-meal.component'
   <div class = 'row'>
   <new-meal-display (onNewMeal)='storeMeals($event)'></new-meal-display>
   <select (change)='onChange($event.target.value)' class ='col-xs-2 filter'>
-  <option value="all">Show All</option>
-  <option value='low'>Show Low Calorie Meals
-  <option value = 'high'>Show High Calorie Meals</option>
+    <option value="all">Show All</option>
+    <option value='low'>Show Low Calorie Meals
+    <option value = 'high'>Show High Calorie Meals</option>
   </select>
   </div>
   <div class = 'row'>
   <meal-display
-  *ngFor = '#currentMeal of meals | mealPipe: filterMeal'
-  (click)='mealClicked(currentMeal)'
-  [class.selected]='currentMeal === selectedMeal'
-  [meal]='currentMeal'
-  ></meal-display>
+    *ngFor = '#currentMeal of meals | mealPipe: filterMeal'
+    (click)='mealClicked(currentMeal)'
+    [class.selected]='currentMeal === selectedMeal'
+    [meal]='currentMeal'>
+  </meal-display>
   <edit-Meal *ngIf='selectedMeal' [meal]='selectedMeal'></edit-Meal>
   </div>
   </div>

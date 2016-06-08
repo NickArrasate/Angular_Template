@@ -5,13 +5,13 @@ import { Meal } from './meal.model';
   selector: 'new-meal-display',
   outputs: ['onNewMeal'],
   template:`
-  <div class='col-sm-4'>
-  <h3>Add a new meal</h3>
-  <input class='form-control' placeholder ='Name' #nameForm/>
-  <input class='form-control' placeholder ='Description' #descForm/>
-  <input class='form-control' placeholder ='Calories' #calForm/>
-  <button class ='btn-success'(click)='addMeal(nameForm, descForm, calForm)'>Submit</button>
-  </div>
+    <div class='col-sm-4'>
+    <h3>Add a new meal</h3>
+    <input class='form-control' placeholder ='Name' #nameForm/>
+    <input class='form-control' placeholder ='Description' #descForm/>
+    <input class='form-control' placeholder ='Calories' #calForm/>
+    <button class ='btn-success'(click)='addMeal(nameForm, descForm, calForm)'>Submit</button>
+    </div>
   `
 })
 
