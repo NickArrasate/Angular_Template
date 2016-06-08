@@ -10,12 +10,15 @@ import { Meal } from './Meal.model';
   <input [(ngModel)]='meal.name' class = 'form-control'/>
   <input [(ngModel)]='meal.details' class = 'form-control'/>
   <input [(ngModel)]='meal.calories' class = 'form-control'/>
-  <button ng-click="showme = !showme">Close</button>
+  <button (click)="closeDisplay()">Close</button>
   </div>
   `
 })
 
 export class EditMealComponent {
   public meal: Meal;
-
+  public showMe: boolean = true;
+  closeDisplay(){
+    this.showMe = false;
+  }
 }
